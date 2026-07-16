@@ -34,6 +34,7 @@ class Player:
         self.dark_knights_alliance = False
         self.lima_alive = False
         self.robert_whitemann = False
+        self.adam_kreuz_cult = False
     @property
     def fight_spirit(self):
             return (self.propaganda + self.authority) * 0.5
@@ -169,3 +170,8 @@ def war():
         print(".", end="", flush=True)
         time.sleep(0.6)
     print()
+
+
+def new_chap():
+    input("Нажми Enter, чтобы начать новую главу"
+          "\n ")

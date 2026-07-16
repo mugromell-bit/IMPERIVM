@@ -1,8 +1,8 @@
-from CORE.IMPERIVM_DEFS import title, choose_event, apply_and_show_effects, war
+from CORE.IMPERIVM_DEFS import title, choose_event, apply_and_show_effects, war, new_chap
+
 
 def chapter_2_2(player, all_chaps_data):
-    input("Нажми Enter, чтобы начать новую главу"
-          "\n ")
+    new_chap()
     title("ГЛАВА II, Часть II: СКРЫТАЯ УГРОЗА")
     print(f"Авторитет: {player.authority}")
     print(f"Экономика: {player.economy}")

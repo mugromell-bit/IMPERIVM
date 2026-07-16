@@ -1,4 +1,4 @@
-from CORE.IMPERIVM_DEFS import title, war, end
+from CORE.IMPERIVM_DEFS import title, war, end, new_chap
 
 
 #ДЕРЕВЕНСКИЙ ТРАП. Интересно HH можно на твиче слушать? +10 к концентрации
@@ -37,8 +37,7 @@ def heff_alliance():
 
 
 def chapter_3(player):
-    input("Нажми Enter, чтобы начать новую главу"
-          "\n ")
+    new_chap()
     title("ГЛАВА III: НОВЫЙ СТАРЫЙ ДРУН")
     print("Пока ты думаешь о великом и пишешь философские труды, тебе доходит неожиданная весть:")
     print("Правитель старого Королевства Харт, Гордон Хартманн, предлагает тебе сделку.")

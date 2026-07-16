@@ -1,11 +1,23 @@
-from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, war
+from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, war, new_chap
 
-def help_log(player):
-    print("Ты помог ЛОГу. Общими усилиями (хотя союзником тебя никто не считает) вы уничтожаете Лиму, а Дум I сбегает и объявляется межгалактическим преступником.")
+
+def help_log():
+    print("Ты помог ЛОГу. Общими усилиями (хотя союзником тебя никто не считает) вы уничтожаете Лиму, Дума находят и казнят, а ЛОГ объявляет о восстановлении спокойствия.")
+
+def stay_neutral(player):
+    print("Ты сохранил нейтралитет. Спустя месяцы сражений Лима проигрывает и разделяется победителями, но Думу удаётся сбежать. Его объявляют межгалактическим военным преступником.")
+    player.robert_whitemann = True
+    return player
+
+
+def help_lima(player):
+    print("Ты помог Лиме в войне. Несмотря на чудовищные потери, Лима выдерживает и сохраняет независимость.")
+    player.lima_alive = True
+    return player
+
 
 def chapter_5(player, all_chaps_data):
-    input("Нажми Enter, чтобы начать новую главу"
-          "\n ")
+    new_chap()
     title("ГЛАВА V: ДА БУДЕТ СВЕТ")
     print("Тем временем на другом конце Вселенной образуется новое необычное государство.")
     print("Его название — Лима.")
@@ -20,6 +32,11 @@ def chapter_5(player, all_chaps_data):
         print("Благодаря неоценимой помощи Рыцарей, твои солдаты не гибнут, ЛОГ считает вмешательство Рыцарей распоряжением Форреста и твоя дипломатия не падает.")
         player.lima_alive = True
     apply_and_show_effects(player, lima_war1)
+    if lima_war1["name"] == "Поддержать ЛОГ":
+        help_log()
+    if lima_war1["name"] == "Проигнорировать":
+        stay_neutral(player)
     if lima_war1["name"] == "Помочь Лиме":
-        print("После твоего великодушного саппорта, Лима, несмотря на чудовищные потери, сохраняют свою независимость. ЛОГ объявляет о достижении поставленных целей и выводит войска.")
-        player.lima_alive = True
+        help_lima(player)
+
+    return player

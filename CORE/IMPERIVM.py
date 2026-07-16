@@ -20,12 +20,15 @@ with open(DATA_FILE_PATH, "r", encoding="utf-8") as f:
 from IMP_ACHIEVES import check_achievements
 from IMPERIVM_DEFS import *
 
-from CHAPTERS.IMP_PRECHAP import philosophies, ideologies
-from CHAPTERS.IMP_CHAP_I import chapter_1
-from CHAPTERS.IMP_CHAP_II import chapter_2
-from CHAPTERS.IMP_CHAP_II_II import chapter_2_2
-from CHAPTERS.IMP_CHAP_III import chapter_3
-from CHAPTERS.IMP_CHAP_IIII import chapter_4
+from PART_I.IMP_PRECHAP import philosophies, ideologies
+from PART_I.IMP_CHAP_I import chapter_1
+from PART_I.IMP_CHAP_II import chapter_2
+from PART_I.IMP_CHAP_II_II import chapter_2_2
+from PART_I.IMP_CHAP_III import chapter_3
+from PART_I.IMP_CHAP_IIII import chapter_4
+from PART_I.IMP_CHAP_V import chapter_5
+from PART_I.CHAPTER_VI import chapter_6
+
 
 print("Добро пожаловать в The Game/ PythonProject5.")
 title("MADE BY VEKCHIS & PRIME SOURCE GROUP")
@@ -137,3 +140,12 @@ player = chapter_4(player, all_chaps_data["chapter 4"])
 new = check_achievements(player)
 if new:
     player.unlocked_achievements.update(new)
+
+#CHAPTER V
+player = chapter_5(player, all_chaps_data["chapter 5"])
+new = check_achievements(player)
+if new:
+    player.unlocked_achievements.update(new)
+
+#CHPATER VI
+player = chapter_6(player)
