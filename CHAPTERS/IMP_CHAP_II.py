@@ -5,7 +5,9 @@ from CORE.IMPERIVM_DEFS import title, war, end, apply_and_show_effects, choose_e
 # chapter2
 
 def chapter_2(player, all_chaps_data):
-    title("ГЛАВА II: Новая Война.")
+    input("Нажми Enter, чтобы начать новую главу"
+          "\n ")
+    title("ГЛАВА II: НОВАЯ ВОЙНА")
     print("Приготовления завершены. Текущие параметры твоего государства:")
     print(f"Авторитет: {player.authority}")
     print(f"Экономика: {player.economy}")

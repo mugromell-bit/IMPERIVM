@@ -4,7 +4,9 @@ from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title
 
 
 def chapter_1(player, all_chaps_data):
-    title("ГЛАВА I: Мобилизация.")
+    input("Нажми Enter, чтобы начать новую главу"
+          "\n ")
+    title("ГЛАВА I: МОБИЛИЗАЦИЯ")
     print("Для твоих невероятных целей тебе нужны:")
     print("Сильная армия")
     print("Стабильная экономика")
@@ -33,3 +35,4 @@ def chapter_1(player, all_chaps_data):
     print(f"Очки дипломатии: {player.diplomacy}")
     diplo_event = choose_event(all_chaps_data["diplomacy_events"], "дипломатию")
     apply_and_show_effects(player, diplo_event)
+    return player

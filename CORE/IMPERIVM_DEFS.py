@@ -10,6 +10,9 @@ def print_effects(effects):
             effect_texts.append(f"{value} {stat}")
 
     print("Эффекты: " + ", ".join(effect_texts))
+
+
+
 class Player:
     def __init__(self, name, empire_name):
         self.name = name
@@ -28,6 +31,9 @@ class Player:
         self.honor_crisis = 0
         self.authority_crisis = 0
         self.unlocked_achievements = set()
+        self.dark_knights_alliance = False
+        self.lima_alive = False
+        self.robert_whitemann = False
     @property
     def fight_spirit(self):
             return (self.propaganda + self.authority) * 0.5
@@ -155,7 +161,8 @@ def end():
 
 
 def war():
-    input("Нажми Enter, чтобы начать войну")
+    input("Нажми Enter, чтобы начать новую главу"
+          "\n ")
     title("ВОЙНА")
     print("Идёт война", end="")
     for _ in range(5):  # 5 точек

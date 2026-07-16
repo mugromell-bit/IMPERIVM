@@ -3,6 +3,7 @@ from pathlib import Path
 import json
 import sys
 
+
 # 1. Находим корень вашего проекта (папку IMPERIVM) относительно этого файла
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -24,6 +25,7 @@ from CHAPTERS.IMP_CHAP_I import chapter_1
 from CHAPTERS.IMP_CHAP_II import chapter_2
 from CHAPTERS.IMP_CHAP_II_II import chapter_2_2
 from CHAPTERS.IMP_CHAP_III import chapter_3
+from CHAPTERS.IMP_CHAP_IIII import chapter_4
 
 print("Добро пожаловать в The Game/ PythonProject5.")
 title("MADE BY VEKCHIS & PRIME SOURCE GROUP")
@@ -118,11 +120,10 @@ if new:
 
 #CHAPTER II, PART II
 if player.diplomacy <= -10:
-    player = chapter_2_2(player)
+    player = chapter_2_2(player, all_chaps_data["chapter 2_2"])
     new = check_achievements(player)
     if new:
         player.unlocked_achievements.update(new)
-#Чудовищно извиняюсь, теперь можно начать. Будем считать сколько строк кода Я напишу до 12.00. Сейчас сделаю отметки и приступлю.
 
 #CHAPTER III
 #Потратил час, но теперь можно начать
@@ -132,7 +133,7 @@ if new:
     player.unlocked_achievements.update(new)
 
 #CHAPTER IIII
-# player = chapter_4(player)
-# new = check_achievements(player)
-# if new:
-#     player.unlocked_achievements.update(new)
+player = chapter_4(player, all_chaps_data["chapter 4"])
+new = check_achievements(player)
+if new:
+    player.unlocked_achievements.update(new)
