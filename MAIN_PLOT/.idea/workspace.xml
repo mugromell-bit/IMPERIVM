@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="59b9398e-fac5-4e78-a1b1-3e526f8a435d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/IMPERIVM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/IMPERIVM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CORE/IMPERIVM.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CORE/IMPERIVM_DEFS.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CORE/IMP_ACHIEVES.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DATA/all_chaps_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DATA/ideologies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DATA/philosophies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/CHAPTER_VI.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_I.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_II.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_III.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_IIII.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_II_II.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_CHAP_V.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../PART_I/IMP_PRECHAP.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="3GgU1FfEi9rqJuEu3qdSgGPLHEc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Tigran/OneDrive/Desktop/IMPERIVM/MAIN_PLOT"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-2653e85de345-6d6dccd035ac-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-253.31033.139" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="59b9398e-fac5-4e78-a1b1-3e526f8a435d" name="Changes" comment="" />
+      <created>1784392490392</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784392490392</updated>
+    </task>
+    <servers />
+  </component>
+</project>

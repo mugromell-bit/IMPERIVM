@@ -1,0 +1,104 @@
+import random
+from MAIN_PLOT.CORE.IMPERIVM_DEFS import title, war, end, apply_and_show_effects, choose_event, new_chap
+
+
+# chapter2
+
+def chapter_2(player, all_chaps_data):
+    new_chap()
+    title("ГЛАВА II: НОВАЯ ВОЙНА")
+    print("Приготовления завершены. Текущие параметры твоего государства:")
+    print(f"Авторитет: {player.authority}")
+    print(f"Экономика: {player.economy}")
+    print(f"Честь: {player.honor}")
+    print(f"Вооружение: {player.armament}")
+    print(f"Снабжение: {player.supply}")
+    print(f"Дипломатия: {player.diplomacy}")
+    print(f"Мощь армии: {player.army_power}")
+    print(f"Количество солдат: {player.army_size}")
+    print("")
+    print("Самое время начать войну! \nТвой противник: Небольшое Герцогство Нил. ")
+    print("Данные о враге:")
+    print("Правитель: Эмилио. Нерационален, импульсивен и непредсказуем.")
+    print("Армия - ???")
+    print("Экономика - ???")
+    print("Снабжение - ???")
+    print("Авторитет лидера - ???")
+    print(
+        "Как оказалось у тебя нет данных о твоём противнике. Ты всё ещё можешь начать войну, но полагаться можно только на удачу.")
+    while True:
+        choice = int(input("1 - Начать войну. Шанс на победу: ???"
+                       "\n2 - Отложить войну\n"))
+        try:
+            if choice == 1:
+                war()
+                title("ПОРАЖЕНИЕ")
+                print("\n")
+                print("Несмотря на все свои недостатки, Эмилио обладает огромной армией и отличным снабжением.")
+                print("Тебя разбили.")
+                end()
+            elif choice == 2:
+                print("Благодаря своей бесконечной мудрости, ты решаешь уйти в наращивание силы.")
+                print("Но теперь, вместо оружия и денег, ты развиваешься в другом направлении.")
+                print("Сейчас тебе нужен ШПИОНАЖ. Он помогает узнавать секреты правителей, государств и организаций.")
+
+                espionage_events = all_chaps_data["espionage_events"]
+                esp_event = choose_event(espionage_events, "шпионаж")
+                apply_and_show_effects(player, esp_event)
+                if "risk_chance" in esp_event:
+                    if random.random() < esp_event["risk_chance"]:
+                        risk_effects = {
+                            "effects": esp_event["risk_effect"]
+                        }
+                        print("\n⚠ ПРОИСХОДИТ НЕПРЕДВИДЕННОЕ!")
+                        apply_and_show_effects(player, risk_effects)
+                        print(esp_event["risk_message"])
+                if "war_chance" in esp_event:
+                    if random.random() < esp_event["war_chance"]:
+                        print("\n⚠ " + esp_event["war_message"])
+                        war()
+                        title("ПОРАЖЕНИЕ")
+                        print("Вы были абсолютно не готовы к войне, застигнутые врасплох действиями министров Нила.")
+                        end()
+                print("\n" + "─" * 60)
+                print("В ходе этой гениальной операции ты узнаёшь невероятно важные данные:")
+                print("Мощь армии - 40")
+                print("Экономика - 50")
+                print("Дипломатия - 0")
+                print("Вот оно: «ало, это камбэчная?»")
+                print("В силу своей импульсивной политики Эмилио перессорился со всей Вселенной.")
+                print("Для победы ты решил объединится с государством, которому Нил насолил больше всего.")
+                print(
+                    "Такое государство - Республика Морра. Правитель Литас - национал-гуманист, несмотря на национализм, не любит войны, но готов поддержать снабжением.")
+                print("Спустя месяцы переговоров, планов и делений чужих территорий, Литас наконец соглашается помочь.")
+                print("Теперь можно начать войну. Характеристики вашего союза:")
+                print(f"Мощь армии: {player.army_power}")
+                print(f"Экономика: {player.economy + 40}")
+                print("\n")
+
+                war()
+                title("ПОБЕДА")
+                victory_effects = {
+                    "effects": {
+                        "army_size": -20000000,
+                        "supply": -5,
+                        "economy": -5,
+                        "diplomacy": -5,
+                        "fear": 5,
+                        "propaganda": 5,
+                        "authority": 10,
+                        "honor": 10
+                    }
+                }
+                print(
+                    "В ходе боёв славной смертью погибло 20 миллионов твоих солдат, ты потерял 5 очков снабжения и 5 очков экономики.")
+                print(
+                    "Благодаря неоценимому вкладу Морры, война проходит успешно. Часть территорий ты забираешь себе, а остальное отдаёшь Морре.")
+                print("После победы ты получаешь следующие эффекты:")
+                apply_and_show_effects(player, victory_effects)
+                print("Новая статистика! (1)")
+                print("СТРАХ - показывает насколько тебя боятся другие государства. Влияет на стабильность.")
+                print("Наконец, Первая Война окончена. С ней закончится и Вторая глава.")
+        except ValueError:
+            print("Попробуй ещё раз")
+        return player
