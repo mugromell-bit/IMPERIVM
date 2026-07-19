@@ -1,6 +1,7 @@
 #chapter1
 
-from MAIN_PLOT.CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
+from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
+
 
 def chapter_1(player, all_chaps_data):
     new_chap()

@@ -1,4 +1,4 @@
-from MAIN_PLOT.CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
+from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
 import random
 
 
@@ -60,11 +60,12 @@ def chapter_4(player, all_chaps_data):
               f"\nВторого предложения не будет."
               f"\nDK.")
         print("\nИсторическая справка: Великий Командор (GREAT COMANDOR) - предводитель Тёмных Рыцарей в своём регионе. Назначается и подчиняется только непосредственному главе всего ордена, Тёмному Королю (DARK KING).")
-        print("\nГотов ли ты принять такое предложение?"
-                "\n")
-        print("1 - Да")
-        print("2 - Нет")
+
         while True:
+            choice = int(input("\nГотов ли ты принять такое предложение?"
+                  "\n"))
+            print("1 - Да")
+            print("2 - Нет")
             try:
                 choice = int(input())
                 if choice == 2:

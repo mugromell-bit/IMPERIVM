@@ -1,4 +1,4 @@
-from MAIN_PLOT.CORE.IMPERIVM_DEFS import title, war, end, new_chap
+from CORE.IMPERIVM_DEFS import title, war, end, new_chap
 
 
 #ДЕРЕВЕНСКИЙ ТРАП. Интересно HH можно на твиче слушать? +10 к концентрации

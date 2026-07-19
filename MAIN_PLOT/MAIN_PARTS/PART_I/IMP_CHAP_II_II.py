@@ -1,4 +1,4 @@
-from MAIN_PLOT.CORE.IMPERIVM_DEFS import title, choose_event, apply_and_show_effects, war, new_chap
+from CORE.IMPERIVM_DEFS import title, choose_event, apply_and_show_effects, war, new_chap
 
 
 def chapter_2_2(player, all_chaps_data):
