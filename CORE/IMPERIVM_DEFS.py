@@ -174,4 +174,4 @@ def war():
 
 def new_chap():
     input("Нажми Enter, чтобы начать новую главу"
-          "\n ")
+          "\n")

@@ -20,14 +20,14 @@ with open(DATA_FILE_PATH, "r", encoding="utf-8") as f:
 from IMP_ACHIEVES import check_achievements
 from IMPERIVM_DEFS import *
 
-from PART_I.IMP_PRECHAP import philosophies, ideologies
-from PART_I.IMP_CHAP_I import chapter_1
-from PART_I.IMP_CHAP_II import chapter_2
-from PART_I.IMP_CHAP_II_II import chapter_2_2
-from PART_I.IMP_CHAP_III import chapter_3
-from PART_I.IMP_CHAP_IIII import chapter_4
-from PART_I.IMP_CHAP_V import chapter_5
-from PART_I.CHAPTER_VI import chapter_6
+from MAIN_PLOT.PART_I.IMP_PRECHAP import philosophies, ideologies
+from MAIN_PLOT.PART_I.IMP_CHAP_I import chapter_1
+from MAIN_PLOT.PART_I.IMP_CHAP_II import chapter_2
+from MAIN_PLOT.PART_I.IMP_CHAP_II_II import chapter_2_2
+from MAIN_PLOT.PART_I.IMP_CHAP_III import chapter_3
+from MAIN_PLOT.PART_I.IMP_CHAP_IIII import chapter_4
+from MAIN_PLOT.PART_I.IMP_CHAP_V import chapter_5
+from MAIN_PLOT.PART_I.CHAPTER_VI import chapter_6
 
 
 print("Добро пожаловать в The Game/ PythonProject5.")
