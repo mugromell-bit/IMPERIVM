@@ -192,7 +192,6 @@ achievements = {
     }
 }
 
-
 def check_achievements(player):
     new_unlocked = []
     for ach_id, ach in achievements.items():

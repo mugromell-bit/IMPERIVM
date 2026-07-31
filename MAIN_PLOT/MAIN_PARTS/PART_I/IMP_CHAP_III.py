@@ -1,7 +1,6 @@
-from CORE.IMPERIVM_DEFS import title, war, end, new_chap
+from MAIN_PLOT.CORE.IMPERIVM_DEFS import title, war, end, new_chap
 
 
-#ДЕРЕВЕНСКИЙ ТРАП. Интересно HH можно на твиче слушать? +10 к концентрации
 def mona_vs_heff_and_player():
     war()
     title("НЕОЖИДАННЫЙ ПОВОРОТ СОБЫТИЙ!")
@@ -51,7 +50,7 @@ def chapter_3(player):
             choice = int(input("Каков твой выбор?"
                                "\n"))
             if choice == 1:
-                return player
+                break
             elif choice == 2:
                 print("Гордон отвечает, что правители больших империй состарились и не могут проводить большие военные походы, а молодые правители слабы и трусливы.")
                 print("Он называет тебя великим правителем и ещё раз предлагает союз.")
@@ -62,15 +61,17 @@ def chapter_3(player):
                         choice = int(input("Что предпримешь?"
                                    "\n"))
                         if choice == 2:
-                            return player
+                            break
                         elif choice == 1:
-                            return heff_alliance()
+                            heff_alliance()
+                            break
                     except ValueError:
                         print("Введи число!")
-
             elif choice == 3:
-                return heff_alliance()
+                heff_alliance()
+                break
         except ValueError:
             print("Введи число!")
+    return player
 
 

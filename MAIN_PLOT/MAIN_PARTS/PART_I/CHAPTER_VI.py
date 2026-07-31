@@ -1,10 +1,27 @@
-from CORE.IMPERIVM_DEFS import new_chap, title
+from MAIN_PLOT.CORE.IMPERIVM_DEFS import new_chap, title
+
+def refuse_adam():
+    print("Ты отказываешься от предложения Адама и навсегда забываешь о нём.")
+
+def accept_adam(player):
+    print(f"Ты принимаешь предложение Адама, отказываешься от правления и отказываешься от прежней жизни. Тебя объявили предателем и разыскивают на территории {player.empire_name}."
+          f"\n")
+    print("Пути назад нет.")
+    #Взаимодействий с классом player больше не будет. Игра переходит в ADAM_CULT.
 
 
-def chapter_6(player):
-    new_chap()
-    title("ГЛАВА VI: NEVER")
-    if player.robert_whitemann:
-        print("Ситуация с Лимой потихоньку забывается, Дум I прекращает активную экспансию и продолжает отказываться от союзов.")
-        print("Но однажды тебе приходит письмо от Тёмного Короля.")
-        print("В нём ")
+    return player
+
+
+# def chapter_6(player):
+#     new_chap()
+#     title("ГЛАВА VI: NEVER")
+#     if player.dum_death or player.robert_whitemann:
+#         print("После невероятных геополитических интриг ты решаешь вернуться к написанию философских трудов, но твой покой прерывают.")
+#         print('Тебе приходит письмо от некого Адама Крёйца. Советники предупреждают, что это обычный космошиз, называющий себя "Национал-приколистом", и обращать на него внимание не стоит.')
+#         print("Открыть письмо?")
+#         print("1 - Нет")
+#         print("2 - Да")
+#         while True:
+#             choice = input(">>> ")
+#             if choice == "1":

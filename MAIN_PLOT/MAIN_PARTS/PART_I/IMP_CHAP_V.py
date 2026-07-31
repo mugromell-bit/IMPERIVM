@@ -1,8 +1,9 @@
-from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, war, new_chap
+from MAIN_PLOT.CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, war, new_chap
 
 
-def help_log():
+def help_log(player):
     print("Ты помог ЛОГу. Общими усилиями (хотя союзником тебя никто не считает) вы уничтожаете Лиму, Дума находят и казнят, а ЛОГ объявляет о восстановлении спокойствия.")
+    player.dum_death = True
 
 def stay_neutral(player):
     print("Ты сохранил нейтралитет. Спустя месяцы сражений Лима проигрывает и разделяется победителями, но Думу удаётся сбежать. Его объявляют межгалактическим военным преступником.")
@@ -33,10 +34,11 @@ def chapter_5(player, all_chaps_data):
         player.lima_alive = True
     apply_and_show_effects(player, lima_war1)
     if lima_war1["name"] == "Поддержать ЛОГ":
-        help_log()
+        help_log(player)
     if lima_war1["name"] == "Проигнорировать":
         stay_neutral(player)
     if lima_war1["name"] == "Помочь Лиме":
         help_lima(player)
 
+    title("Глава V окончена. С ней заканчивается и Первая Часть.")
     return player

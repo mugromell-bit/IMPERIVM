@@ -1,4 +1,4 @@
-from CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
+from MAIN_PLOT.CORE.IMPERIVM_DEFS import apply_and_show_effects, choose_event, title, new_chap
 import random
 
 
@@ -7,7 +7,8 @@ default_dark_region_names = ["Святая Земля", "Бастион Тьмы
 
 def accept_dark_knights(player):
     print("Ты принял предложение Тёмного Короля. Теперь ты - Великий Командор своего Региона.")
-    dark_region_name = input("Как ты назовёшь свой Регион? Нажми Enter, чтобы получить случайное имя.")
+    dark_region_name = input("Как ты назовёшь свой Регион? Нажми Enter, чтобы получить случайное имя."
+                             "\n")
     if not dark_region_name:
         dark_region_name = random.choice(default_dark_region_names)
         print(f"Твой регион получил название {dark_region_name}.")
@@ -59,15 +60,15 @@ def chapter_4(player, all_chaps_data):
               f"\nПомни, что однажды став Тёмным Рыцарем, ты остаёшься им навсегда. Здесь нет пути назад."
               f"\nВторого предложения не будет."
               f"\nDK.")
-        print("\nИсторическая справка: Великий Командор (GREAT COMANDOR) - предводитель Тёмных Рыцарей в своём регионе. Назначается и подчиняется только непосредственному главе всего ордена, Тёмному Королю (DARK KING).")
-
+        print("\nИсторическая справка: Великий Командор (GREAT COMANDOR) - предводитель Тёмных Рыцарей в своём регионе. "
+              "\nНазначается и подчиняется только непосредственному главе всего ордена, Тёмному Королю (DARK KING).")
+        print("\nГотов ли ты принять такое предложение?"
+                  "\n")
+        print("1 - Да")
+        print("2 - Нет")
         while True:
-            choice = int(input("\nГотов ли ты принять такое предложение?"
-                  "\n"))
-            print("1 - Да")
-            print("2 - Нет")
             try:
-                choice = int(input())
+                choice = int(input(">>> "))
                 if choice == 2:
                     refuse_dark_knights(player)
                     break
@@ -76,7 +77,6 @@ def chapter_4(player, all_chaps_data):
                     break
             except ValueError:
                 print("Введи число!")
-
     return player
 
 
