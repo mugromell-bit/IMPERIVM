@@ -40,17 +40,23 @@ print("Твоя цель - Захватить Вселенную."
 while True:
     name = input("Твоё имя: ").strip()
     empire_name = input("Название твоего государства: ").strip()
-    if name.lower() == "alexandra":
+    if name.lower() == "hoffman":
         hoffman_ending()
     if name.lower() == "hara":
         hara_ending()
     if name.lower() == "cibylya":
-        title("ПОБЕДА?")
-        print("Ты решил сачкануть и вместо правления уехал в лагерь.")
-        end()
+        cibylya_ending()
     if name.lower() == "роман":
         roman_fishing()
         end()
+    if name.lower() == "андрей каренюгин":
+        andrei_karenyugin_ending()
+    if name.lower() == "андрей каренюгян":
+        andrei_karenyugyan_ending()
+    if name.lower() == "darvi":
+        darvi_ending()
+    if empire_name.lower() == "terranova":
+        terranova_ending()
     else:
         break
 
@@ -96,6 +102,3 @@ player = chapter_5(player, all_chaps_data["chapter 5"])
 new = check_achievements(player)
 if new:
     player.unlocked_achievements.update(new)
-
-#CHPATER VI
-#
