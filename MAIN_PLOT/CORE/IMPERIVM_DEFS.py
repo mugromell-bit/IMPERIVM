@@ -252,6 +252,7 @@ def andrei_karenyugyan_ending():
         else:
             print("Նորից փորձեք։")
 
+
 def terranova_ending():
     title("//SOON 🤫🤫🤫")
     end()
