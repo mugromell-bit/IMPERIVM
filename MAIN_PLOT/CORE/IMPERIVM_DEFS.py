@@ -256,6 +256,7 @@ def terranova_ending():
     title("//SOON 🤫🤫🤫")
     end()
 
+
 def darvi_ending():
     title("BACTERIA'S MOST WANTED")
     print("Познав саму натуру химии и биологии, ты работаешь в армянской стоматологии.")
