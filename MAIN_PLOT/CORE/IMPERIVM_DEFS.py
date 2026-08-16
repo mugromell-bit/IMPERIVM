@@ -1,4 +1,5 @@
 import time
+from SIDE_PROJECTS.ROMAN_FISHING import roman_fishing
 
 
 class Player:
@@ -167,6 +168,27 @@ def new_chap():
     input("Нажми Enter, чтобы начать новую главу"
           "\n")
 
+def name_check(name, empire_name):
+    if name.lower() == "hoffman":
+        hoffman_ending()
+    if name.lower() == "hara":
+        hara_ending()
+    if name.lower() == "cibylya":
+        cibylya_ending()
+    if name.lower() == "роман":
+        roman_fishing()
+        end()
+    if name.lower() == "андрей каренюгин":
+        andrei_karenyugin_ending()
+    if name.lower() == "андрей каренюгян":
+        andrei_karenyugyan_ending()
+    if name.lower() == "darvi":
+        darvi_ending()
+    if name.lower() == "big boss israel":
+        big_boss_israel_ending()
+    if empire_name.lower() == "terranova":
+        terranova_ending()
+
 
 def hara_ending():
     title("ЧЕСТЬ ВЫШЕ ПОБЕДЫ")
@@ -263,4 +285,13 @@ def darvi_ending():
     print("Познав саму натуру химии и биологии, ты работаешь в армянской стоматологии.")
     print("Amat Victoria Cvram!")
     title("51")
+    end()
+
+
+def big_boss_israel_ending():
+    title("ДЛЯ КУЛЬТУРЫ, ДЛЯ СТРАНЫ")
+    print("Осознав себя как Белый Человек, ты становишься Поваром и гордишься своей кухней.")
+    israel_art_path = Path(__file__).resolve().parent.parent / "DATA" / "ARTS" / "ISRAEL_ART.txt"
+    israel_art = load_art(israel_art_path)
+    drawing_pics(israel_art)
     end()

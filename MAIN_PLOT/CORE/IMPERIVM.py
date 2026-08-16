@@ -20,7 +20,7 @@ from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_II_II import chapter_2_2
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_III import chapter_3
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_IIII import chapter_4
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_V import chapter_5
-from SIDE_PROJECTS.ROMAN_FISHING import roman_fishing
+# from SIDE_PROJECTS.ROMAN_FISHING import roman_fishing
 
 
 
@@ -37,28 +37,11 @@ title("ПРОЛОГ")
 print("\nТы - один из тысяч мелких правителей во Вселенной. Твои силы невелики, а власть слаба.\n")
 print("Твоя цель - Захватить Вселенную."
       "\n")
-while True:
-    name = input("Твоё имя: ").strip()
-    empire_name = input("Название твоего государства: ").strip()
-    if name.lower() == "hoffman":
-        hoffman_ending()
-    if name.lower() == "hara":
-        hara_ending()
-    if name.lower() == "cibylya":
-        cibylya_ending()
-    if name.lower() == "роман":
-        roman_fishing()
-        end()
-    if name.lower() == "андрей каренюгин":
-        andrei_karenyugin_ending()
-    if name.lower() == "андрей каренюгян":
-        andrei_karenyugyan_ending()
-    if name.lower() == "darvi":
-        darvi_ending()
-    if empire_name.lower() == "terranova":
-        terranova_ending()
-    else:
-        break
+
+name = input("Твоё имя: ").strip()
+empire_name = input("Название твоего государства: ").strip()
+name_check(name, empire_name)
+
 
 player = Player(name, empire_name)
 
