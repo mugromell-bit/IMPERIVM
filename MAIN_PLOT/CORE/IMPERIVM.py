@@ -20,14 +20,14 @@ from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_II_II import chapter_2_2
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_III import chapter_3
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_IIII import chapter_4
 from MAIN_PLOT.MAIN_PARTS.PART_I.IMP_CHAP_V import chapter_5
-# from SIDE_PROJECTS.ROMAN_FISHING import roman_fishing
 
 
 
-title("IMPERIVM by VEKCHIS & V-EAGLE")
+
+title("IMPERIVM by SPYASCHIY")
 
 print("\nСоздано при поддержке:")
-title("67 GROUP, PRIME SOVRCE TECH., HAPPY HOLIDAYS CO. & CHEPUHISTIKA INC.")
+title("GATE OF THE FATE, PRIME SOVRCE TECH., HAPPY HOLIDAYS CO. & CHEPUHISTIKA INC.")
 # print("\nЗадать вопрос, посмотреть код, почитать лор или оставить отзыв об игре можно в нашем телеграм-канале PrimeSovrce")
 print("\nТвой путь начинается здесь."
       "\n")

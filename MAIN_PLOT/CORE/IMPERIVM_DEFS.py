@@ -1,5 +1,5 @@
 import time
-from SIDE_PROJECTS.ROMAN_FISHING import roman_fishing
+from pathlib import Path
 
 
 class Player:
@@ -69,9 +69,8 @@ def print_effects(effects):
     print("Эффекты: " + ", ".join(effect_texts))
 
 
-from pathlib import Path
 
-# Теперь PyCharm знает, что можно передавать и Path, и str
+
 def load_art(filepath: Path | str) -> str:
     with open(filepath, "r", encoding="utf-8") as f:
         return f.read()
@@ -90,7 +89,7 @@ def apply_and_show_effects(player, event):
     print("ПРИМЕНЯЕМ ЭФФЕКТЫ:")
     changed_stats = {}
     for stat, value in event["effects"].items():
-        if hasattr(player, stat) and stat != "stability":
+        if hasattr(player, stat) and stat != "stability" and stst != "fight_spirit" and stat != "army_power":
             old = getattr(player, stat)
             new = old + value
             setattr(player, stat, new)
@@ -119,24 +118,13 @@ def choose_event(events_dict, category_name):
             war_percent = int(event["war_chance"] * 100)
             print(f"Критический риск/ Война ({war_percent}%)")
     while True:
-        try:
-            choice = (input(f"\nВведи номер способа (1-3): ")).strip()
-            if choice in events_dict:
-                selected_event = events_dict[choice]
-                print(f"\nТы выбрал способ {selected_event['name']}!")
-                return selected_event
-            else:
+        choice = (input(f"\nВведи номер способа (1-3): ")).strip()
+        if choice in events_dict:
+            selected_event = events_dict[choice]
+            print(f"\nТы выбрал способ {selected_event['name']}!")
+            return selected_event
+        else:
                 print("Выбери число от 1 до 3.")
-        except ValueError:
-            print("Введи число!")
-
-
-# def say(text, delay=0.02, end="\n"):
-#     """Красиво выводит текст в игре"""
-#     for char in str(text):
-#         print(char, end='', flush=True)
-#         time.sleep(delay)
-#     print(end=end)
 
 
 def separator(length=60):
@@ -175,9 +163,6 @@ def name_check(name, empire_name):
         hara_ending()
     if name.lower() == "cibylya":
         cibylya_ending()
-    if name.lower() == "роман":
-        roman_fishing()
-        end()
     if name.lower() == "андрей каренюгин":
         andrei_karenyugin_ending()
     if name.lower() == "андрей каренюгян":
